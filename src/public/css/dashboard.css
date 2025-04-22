@@ -1,0 +1,71 @@
+main {
+  height: calc(100% - 58px);
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+.dashboard-logo-container {
+  margin: 0 auto;
+  width: 230px;
+  margin-bottom: 18px;
+}
+
+.dashboard-message-container {
+  width: 400px;
+}
+
+.dashboard-message-container h2,
+.dashboard-message-container p {
+  text-align: center;
+}
+
+.dashboard-message-container h2 {
+  margin-bottom: 5px;
+}
+
+section.list-incidents-container {
+  width: 100%;
+  align-self: start;
+}
+
+.list-incidents-container .table-list-incidents {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-list-incidents thead {
+  text-align: left;
+  border-bottom: 2px solid #dedfe1;
+}
+
+.table-list-incidents thead tr th {
+  padding-bottom: 8px;
+}
+
+.table-list-incidents tbody tr td {
+  padding: 8px 0px;
+  border-bottom: 1px solid #dedfe1;
+}
+
+.table-list-incidents tbody .col-flag-state > span {
+  border-radius: 8px;
+  padding: 4px;
+  font-size: .75rem;
+}
+
+.color-state-open > span {
+  color: white;
+  background-color: #a5adbb;
+}
+
+.color-state-inProcess > span {
+  color: white;
+  background-color: #4c9aff;
+}

@@ -1,0 +1,82 @@
+<%- include('partials/up') %>
+
+  <% if (section && section === 'incidencias') { %>
+    <section class="list-incidents-container">
+      <!-- <div>Filtros</div> -->
+      <div>
+        <table class="table-list-incidents">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Canal</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Fecha registro</th>
+              <th scope="col">Usuario Asignado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td># 001</td>
+              <td>No se puede acceder al correo corporativo</td>
+              <td>Web</td>
+              <td class="col-flag-state color-state-open"><span>Abierto</span></td>
+              <td>2025-04-20 08:15</td>
+              <td>jparedes</td>
+            </tr>
+            <tr>
+              <td># 002</td>
+              <td>Error al imprimir desde SAP</td>
+              <td>Teléfono</td>
+              <td class="col-flag-state color-state-inProcess"><span>En proceso</span></td>
+              <td>2025-04-19 14:32</td>
+              <td>mvaldez</td>
+            </tr>
+            <tr>
+              <td># 003</td>
+              <td>Falla en red en el piso 3</td>
+              <td>Correo</td>
+              <td class="col-flag-state color-state-asigned"><span>Asignado</span></td>
+              <td>2025-04-18 10:05</td>
+              <td>rcastro</td>
+            </tr>
+            <tr>
+              <td># 004</td>
+              <td>Actualización de antivirus fallida</td>
+              <td>Web</td>
+              <td class="col-flag-state color-state-resolved"><span>Resuelto</span></td>
+              <td>2025-04-18 17:40</td>
+              <td>kquintero</td>
+            </tr>
+            <tr>
+              <td># 005</td>
+              <td>Solicita acceso a carpeta compartida</td>
+              <td>Portal de tickets</td>
+              <td class="col-flag-state color-state-closed"><span>Cerrado</span></td>
+              <td>2025-04-17 09:25</td>
+              <td>lfigueroa</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  <% } else { %>
+    <section>
+      <div class="dashboard-logo-container">
+          <img src="https://get.witei.com/wp-content/uploads/2020/08/Logo-positivo-800px.svg" alt="Logo">
+      </div>
+      <div class="dashboard-message-container">
+          <h2>
+              Bienvenido a ESTO
+          </h2>
+          <p>
+              ¿Algo no funciona como debería? ¿Necesitas ayuda con algo?
+              Desde aquí puedes reportar incidencias, pedir soporte o ver el estado de tus tickets abiertos.
+              Estamos para ayudarte.
+          </p>
+      </div>
+    </section>
+  <% } %>
+
+
+<%- include('partials/down') %>
