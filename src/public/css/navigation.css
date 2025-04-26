@@ -10,22 +10,20 @@ nav.menu-navigation {
   transition: left .3s;
 }
 
-nav .nav-option > button:hover {
+nav .nav-option > a:hover {
   background-color:#dedfe1;
 }
 
-.ticket-container .ticket-button {
+.incidencies-button-container a {
   display: flex;
-  background-size: contain;
-  background-color: #00000000;
-  border: none;
-  padding: 0;
+  padding: 8px;
+  border-radius: 8px;
 }
 
-.ticket-button span {
+.incidencies-button span {
   display: block;
 }
-.ticket-button span:nth-child(1) {
+.incidencies-button span:nth-child(1) {
   height: 24px;
   width: 24px;
   background-image: url('/icons/ticket.svg');
@@ -34,6 +32,6 @@ nav .nav-option > button:hover {
   margin-right: 6px;
 }
 
-.ticket-button span:nth-child(2) {
+.incidencies-button span:nth-child(2) {
   align-self: center;
 }

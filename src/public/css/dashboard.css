@@ -58,14 +58,26 @@ section.list-incidents-container {
   border-radius: 8px;
   padding: 4px;
   font-size: .75rem;
+  color: white;
+  font-weight: bold;
 }
 
 .color-state-open > span {
-  color: white;
   background-color: #a5adbb;
 }
 
 .color-state-inProcess > span {
-  color: white;
   background-color: #4c9aff;
+}
+
+.color-state-asigned > span {
+  background-color: #ffc400;
+}
+
+.color-state-resolved > span {
+  background-color: #79f2bf;
+}
+
+.color-state-closed > span {
+  background-color: #fe8f72;
 }

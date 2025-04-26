@@ -8,7 +8,7 @@ export function run(port) {
   app.set('views', 'src/views');
   app.use(express.static('src/public'))
 
-  app.use(Routes)
+  app.use(Routes);
 
   app.listen(port, (err) => {
     if(err) {
