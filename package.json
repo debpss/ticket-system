@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "node --watch src/index.mjs",
-    "start": "node src/index.mjs"
+    "start": "node src/index.mjs",
+    "package": "npm pack"
   },
   "keywords": [],
   "author": "",

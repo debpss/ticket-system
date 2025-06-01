@@ -1,0 +1,21 @@
+<%- include('../partials/up') %>
+  <% if (section && section === 'incidencias') { %>
+    <%- include('incidents') %>
+  <% } else { %>
+    <section>
+      <div class="dashboard-logo-container">
+          <img src="https://get.witei.com/wp-content/uploads/2020/08/Logo-positivo-800px.svg" alt="Logo">
+      </div>
+      <div class="dashboard-message-container">
+          <h2>
+              Bienvenido a ESTO
+          </h2>
+          <p>
+              ¿Algo no funciona como debería? ¿Necesitas ayuda con algo?
+              Desde aquí puedes reportar incidencias, pedir soporte o ver el estado de tus tickets abiertos.
+              Estamos para ayudarte.
+          </p>
+      </div>
+    </section>
+  <% } %>
+<%- include('../partials/down') %>

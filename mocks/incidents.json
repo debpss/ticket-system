@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "incidentNumber": "001",
+      "description": "No se puede acceder al correo corporativo",
+      "channel": "Web",
+      "status": "Abierto",
+      "registrationDate": "2025-04-20 08:15",
+      "assignedUser": "jparedes"
+    },
+    {
+      "incidentNumber": "002",
+      "description": "Error al imprimir desde SAP",
+      "channel": "Teléfono",
+      "status": "En proceso",
+      "registrationDate": "2025-04-19 14:32",
+      "assignedUser": "mvaldez"
+    },
+    {
+      "incidentNumber": "003",
+      "description": "Falla en red en el piso 3",
+      "channel": "Correo",
+      "status": "Asignado",
+      "registrationDate": "2025-04-18 10:05",
+      "assignedUser": "rcastro"
+    },
+    {
+      "incidentNumber": "004",
+      "description": "Actualización de antivirus fallida",
+      "channel": "Web",
+      "status": "Resuelto",
+      "registrationDate": "2025-04-18 17:40",
+      "assignedUser": "kquintero"
+    },
+    {
+      "incidentNumber": "005",
+      "description": "Solicita acceso a carpeta compartida",
+      "channel": "Portal de tickets",
+      "status": "Cerrado",
+      "registrationDate": "2025-04-17 09:25",
+      "assignedUser": "lfigueroa"
+    }
+  ],
+  "total": 5,
+  "page": 1,
+  "pageSize": 5,
+  "totalPages": 1,
+  "hasNextPage": false,
+  "hasPreviousPage": false
+}

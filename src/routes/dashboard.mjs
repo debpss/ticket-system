@@ -4,11 +4,11 @@ import { dashboardController } from '../controllers/dashboard.mjs';
 const router = Router();
 
 router
-  .route('/dashboard/:section')
+  .route('/dashboard')
   .get(dashboardController)
 
 router
-  .route('/dashboard')
+  .route('/dashboard/:section')
   .get(dashboardController)
 
 export default router;

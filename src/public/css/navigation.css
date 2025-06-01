@@ -23,6 +23,7 @@ nav .nav-option > a:hover {
 .incidencies-button span {
   display: block;
 }
+
 .incidencies-button span:nth-child(1) {
   height: 24px;
   width: 24px;

@@ -1,0 +1,103 @@
+<section class="incidents-container">
+  <article style="margin-bottom: 18px;">
+    <header class="incidents-header">
+      <h2>Incidencias</h2>
+      <span class="text-total-tickets"><%= totalIncidents %> Tickets</span>
+    </header>
+    <section class="incidents-options">
+      <div>
+        <button class="create-ticket-modal-button" id="id-create-ticket-modal-button">Crear Ticket</button>
+      </div>
+    </section>
+  </article>
+  <!-- <div>Filtros</div> -->
+  <div>
+    <table class="table-list-incidents">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Canal</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Fecha registro</th>
+          <th scope="col">Usuario Asignado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%
+          const colorStatusFlags = {
+            'Abierto': 'open',
+            'En proceso': 'inProcess',
+            'Asignado': 'asigned',
+            'Resuelto': 'resolved',
+            'Cerrado': 'closed'
+          };
+        %>
+        <% incidentsData.forEach(incident => { %>
+          <tr>
+            <td># <%= incident.incidentNumber %></td>
+            <td><%= incident.description %></td>
+            <td><%= incident.channel %></td>
+            <td class="col-flag-state color-state-<%= colorStatusFlags[incident.status] || '' %>">
+              <span><%= incident.status %></span>
+            </td>
+            <td><%= incident.registrationDate %></td>
+            <td><%= incident.assignedUser %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+  <article class="container-create-ticket-modal" id="id-container-create-ticket-modal">
+    <section class="form-create-ticket-modal-container">
+      <div class="close-modal-button-container">
+        <button class="close-modal-button" id="id-close-create-ticket-modal">&times;</button>
+      </div>
+      <div>
+        <h3>Crear Ticket</h3>
+        <p class="text-create-ticket-info">Complete el formulario para crear un nuevo ticket.</p>
+      </div>
+      <form class="form-create-ticket">
+        <div class="form-create-ticket-group">
+          <label for="">Canal</label>
+          <select class="select-create-ticket-group" id="id-select-create-ticket-channel" required>
+            <option value="" disabled selected>Seleccione un canal</option>
+            <option value="portalTickets">Portal de tickets</option>
+            <option value="telephone">Teléfono</option>
+            <option value="web">Web</option>
+            <option value="email">Correo</option>
+          </select>
+        </div>
+        <div class="form-create-ticket-group">
+          <label for="">Estado</label>
+          <select class="select-create-ticket-group" id="id-select-create-ticket-status" required>
+            <option value="" disabled selected>Seleccione un estado</option>
+            <option value="open">Abierto</option>
+            <option value="inProcess">En proceso</option>
+            <option value="asigned">Asignado</option>
+            <option value="resolved">Resuelto</option>
+            <option value="closed">Cerrado</option>
+          </select>
+        </div>
+        <div class="form-create-ticket-group">
+          <label for="">Asignar a:</label>
+          <select class="select-create-ticket-group" ="id-select-create-ticket-user" required>
+            <option value="" disabled selected>Seleccione un usuario</option>
+            <option value="1">jparedes</option>
+            <option value="2">mvaldez</option>
+            <option value="3">rcastro</option>
+            <option value="4">kquintero</option>
+            <option value="5">lfigueroa</option>
+          </select>
+        </div>
+        <div class="form-create-ticket-group">
+          <label for="">Descripción</label>
+          <textarea class="textarea-create-ticket-group" id="id-input-create-ticket-description" placeholder="Descripción del ticket" rows="7" required></textarea>
+        </div>
+        <div>
+          <button class="create-ticket-button" type="submit" id="id-button-create-ticket">Crear Ticket</button>
+        </div>
+      </form>
+    </section>
+  </article>
+</section>

@@ -1,9 +1,9 @@
 main {
-  height: calc(100% - 58px);
+  height: calc(100% - 58px); /** Calculamos el alto de contenido principal */
   padding: 36px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /** Alineamos verticalmente al centro */
+  justify-content: center; /** Alineamos horizontalmente al centro */
 }
 
 .dashboard-logo-container img {
@@ -30,12 +30,12 @@ main {
   margin-bottom: 5px;
 }
 
-section.list-incidents-container {
+section.incidents-container {
   width: 100%;
   align-self: start;
 }
 
-.list-incidents-container .table-list-incidents {
+.incidents-container .table-list-incidents {
   width: 100%;
   border-collapse: collapse;
 }
@@ -62,22 +62,106 @@ section.list-incidents-container {
   font-weight: bold;
 }
 
-.color-state-open > span {
+.table-list-incidents .color-state-open > span {
   background-color: #a5adbb;
 }
 
-.color-state-inProcess > span {
+.table-list-incidents .color-state-inProcess > span {
   background-color: #4c9aff;
 }
 
-.color-state-asigned > span {
+.table-list-incidents .color-state-asigned > span {
   background-color: #ffc400;
 }
 
-.color-state-resolved > span {
+.table-list-incidents .color-state-resolved > span {
   background-color: #79f2bf;
 }
 
-.color-state-closed > span {
+.table-list-incidents .color-state-closed > span {
   background-color: #fe8f72;
+}
+
+.incidents-header {
+  margin-bottom: 8px;
+}
+
+.incidents-header .text-total-tickets,
+.text-create-ticket-info{
+  display: block;
+  font-size: var(--font-size-medium);
+}
+
+.container-create-ticket-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  transition: opacity 0.4s ease;
+}
+
+.container-create-ticket-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form-create-ticket-modal-container {
+  padding: 18px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.close-modal-button-container {
+  display: flex;
+  justify-content: end;
+}
+
+.form-create-ticket label{
+  display: block;
+  font-size: var(--font-size-medium);
+  margin-bottom: 3px;
+}
+
+.form-create-ticket textarea,
+.form-create-ticket select {
+  width: 100%;
+}
+
+.form-create-ticket .form-create-ticket-group {
+  margin-bottom: 8px;
+}
+
+.form-create-ticket .select-create-ticket-group,
+.form-create-ticket .textarea-create-ticket-group {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.create-ticket-modal-button,
+.create-ticket-button {
+  border: none;
+  background: #4eaf50;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.create-ticket-button {
+  width: 100%;
+}
+
+.close-modal-button-container .close-modal-button {
+  background: none;
+  border: none;
 }

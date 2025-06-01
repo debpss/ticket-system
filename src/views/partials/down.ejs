@@ -2,6 +2,9 @@
 <!-- <%- include('footer') %> -->
 
 <script type="module" src="/js/header.js"></script>
+<% if (typeof pageScript !== 'undefined' && pageScript) { %>
+    <script type="module" src="/js/<%= pageScript %>.js"></script>
+<% } %>
 
 </body>
 </html>
